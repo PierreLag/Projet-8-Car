@@ -2664,6 +2664,7 @@ GameObject:
   - component: {fileID: 4735839243174642}
   - component: {fileID: 95679165997764248}
   - component: {fileID: 114944249367113288}
+  - component: {fileID: 6476437655413415405}
   m_Layer: 0
   m_Name: SportCar
   m_TagString: Untagged
@@ -2680,9 +2681,9 @@ Transform:
   m_GameObject: {fileID: 1536997390485366}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4779180967543810}
   - {fileID: 4568934281116856}
@@ -2747,6 +2748,23 @@ MonoBehaviour:
   RLM: {fileID: 2100000, guid: 0a5d78c3e1415ac40a0e25976aaae858, type: 2}
   ILM: {fileID: 2100000, guid: ca15278988a972e498139a4b1b6b8ce9, type: 2}
   IRM: {fileID: 2100000, guid: c759fce7a5dd6dc4ea2792a428e94050, type: 2}
+--- !u!114 &6476437655413415405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536997390485366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde0a0fef7b6c4b418a9a525e95157db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carData: {fileID: 11400000, guid: 003051535dd810d49a25175d2451d500, type: 2}
+  meshToColour1: {fileID: 23350828502251332}
+  meshToColour2: {fileID: 23216106595948678}
+  isRotating: 0
+  rotationSpeed: 0
 --- !u!1 &1547043310347174
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,6 +4114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4276069600025474}
   - component: {fileID: 108629408886983770}
+  - component: {fileID: 4379807864122565360}
   m_Layer: 0
   m_Name: Spotlight
   m_TagString: Untagged
@@ -4180,3 +4199,26 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &4379807864122565360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970110854058100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0

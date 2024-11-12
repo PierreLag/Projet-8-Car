@@ -11,4 +11,5 @@ public class CarSO : ScriptableObject
     public int gears;
     public GameObject modelPrefab;
     public ColourSchemeSO[] colourSchemeList;
+    public RenderTexture carPreviewTexture;
 }
