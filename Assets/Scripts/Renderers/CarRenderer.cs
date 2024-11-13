@@ -36,4 +36,14 @@ public class CarRenderer : MonoBehaviour
         meshToColour1.material = colourScheme.baseMaterial;
         meshToColour2.material = colourScheme.secondaryMaterial;
     }
+
+    public void SetIsRotating(bool isRotating)
+    {
+        this.isRotating = isRotating;
+    }
+
+    public void SetRotationSpeed(float rotationSpeed)
+    {
+        this.rotationSpeed = rotationSpeed;
+    }
 }
