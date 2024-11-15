@@ -14,16 +14,24 @@ public class CarSelectorRenderer : MonoBehaviour
     [SerializeField]
     private EmplacementController carEmplacement;
 
+    [SerializeField]
+    private float marginAroundButtons;
+    [SerializeField]
+    private float spaceBetweenButtons;
+
     // Start is called before the first frame update
     void Start()
     {
         Button currentButton;
+        int nbCar = 0;
 
         foreach (CarSO car in listCars.cars)
         {
             currentButton = Instantiate(carButtonTemplate, scrollView.content);
             currentButton.onClick.AddListener( () => ChangeCar(car));
             currentButton.GetComponent<RawImage>().texture = car.carPreviewTexture;
+            ((RectTransform)currentButton.transform).localPosition = new Vector3(marginAroundButtons + nbCar * ((RectTransform)currentButton.transform).sizeDelta.x + spaceBetweenButtons * nbCar, 0, 0);
+            nbCar++;
         }
     }
 

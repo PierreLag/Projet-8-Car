@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EmplacementController : MonoBehaviour
 {
+    [SerializeField]
+    private float carsRotationSpeed;
+
     private GameObject displayedCar;
 
     // Start is called before the first frame update
@@ -19,10 +22,28 @@ public class EmplacementController : MonoBehaviour
             Destroy(displayedCar);
         }
 
-        displayedCar = Instantiate(car.modelPrefab);
+        displayedCar = Instantiate(car.modelPrefab, transform);
 
         CarRenderer carRenderer = displayedCar.GetComponent<CarRenderer>();
         carRenderer.SetIsRotating(true);
-        carRenderer.SetRotationSpeed(5f);
+        carRenderer.SetRotationSpeed(carsRotationSpeed);
+    }
+
+    public void StopCarRotation()
+    {
+        if (displayedCar != null)
+        {
+            CarRenderer carRenderer = displayedCar.GetComponent<CarRenderer>();
+            carRenderer.SetIsRotating(false);
+        }
+    }
+
+    public void StartCarRotation()
+    {
+        if (displayedCar != null)
+        {
+            CarRenderer carRenderer = displayedCar.GetComponent<CarRenderer>();
+            carRenderer.SetIsRotating(true);
+        }
     }
 }

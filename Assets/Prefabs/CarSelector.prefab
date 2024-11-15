@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5507846665789106974}
+  - component: {fileID: 9138350707392371215}
   m_Layer: 0
   m_Name: CarSelector
   m_TagString: Untagged
@@ -33,6 +34,24 @@ Transform:
   - {fileID: 8937692344636896392}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9138350707392371215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820927351192702222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0162e766b2a95d847ae8ea7f5e83656a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carButtonTemplate: {fileID: 5069567147892694624, guid: b26a8ed06f642f64bbe1559230b1c859, type: 3}
+  listCars: {fileID: 11400000, guid: dd5a37730234e5c4c81f7ef5fb673a8b, type: 2}
+  scrollView: {fileID: 3468608069835493389}
+  carEmplacement: {fileID: 0}
+  marginAroundButtons: 70
+  spaceBetweenButtons: 20
 --- !u!1 &1308190376356474798
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 2502620890325368306}
   m_Horizontal: 1
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1

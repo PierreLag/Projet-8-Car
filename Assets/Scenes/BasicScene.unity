@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2502620890325368306, guid: 1300d8e31f746cc45bf404017d5f67fb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000030517578
+      value: -0.0008343402
       objectReference: {fileID: 0}
     - target: {fileID: 2502620890325368306, guid: 1300d8e31f746cc45bf404017d5f67fb, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9138350707392371215, guid: 1300d8e31f746cc45bf404017d5f67fb, type: 3}
+      propertyPath: carEmplacement
+      value: 
+      objectReference: {fileID: 1907503859}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -398,7 +402,8 @@ PrefabInstance:
       value: 33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2626757739553014894, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -1297,6 +1302,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2642880648803088362, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
   m_PrefabInstance: {fileID: 1907503857}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1907503859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3813018716546654016, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
+  m_PrefabInstance: {fileID: 1907503857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aafe02fe9ba1d34093363fabdfa38f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1940752255
 GameObject:
   m_ObjectHideFlags: 0
