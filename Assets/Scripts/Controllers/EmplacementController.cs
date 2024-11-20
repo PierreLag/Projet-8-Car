@@ -46,4 +46,9 @@ public class EmplacementController : MonoBehaviour
             carRenderer.SetIsRotating(true);
         }
     }
+
+    public CarRenderer GetCurrentCarRenderer()
+    {
+        return displayedCar.GetComponent<CarRenderer>();
+    }
 }

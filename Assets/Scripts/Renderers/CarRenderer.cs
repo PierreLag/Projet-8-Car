@@ -7,7 +7,7 @@ public class CarRenderer : MonoBehaviour
     [SerializeField]
     private CarSO carData;
     [SerializeField]
-    private MeshRenderer meshToColour1;
+    private MeshRenderer[] meshesToColour1;
     [SerializeField]
     private MeshRenderer meshToColour2;
 
@@ -33,7 +33,9 @@ public class CarRenderer : MonoBehaviour
 
     public void ChangeColourScheme(ColourSchemeSO colourScheme)
     {
-        meshToColour1.material = colourScheme.baseMaterial;
+        foreach(MeshRenderer mesh in meshesToColour1)
+            mesh.material = colourScheme.baseMaterial;
+
         meshToColour2.material = colourScheme.secondaryMaterial;
     }
 

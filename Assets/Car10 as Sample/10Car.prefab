@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carData: {fileID: 11400000, guid: 25b89fbcc8d5e724faab5c2efb3d8422, type: 2}
-  meshToColour1: {fileID: 5514278007831376846}
+  meshesToColour1:
+  - {fileID: 5514278007831376846}
   meshToColour2: {fileID: 4862926187983909482}
   isRotating: 0
   rotationSpeed: 0
@@ -153,7 +154,7 @@ PrefabInstance:
     - target: {fileID: -2859109400176981367, guid: fb208ae619cf34a439b5ed83637439ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c12483be8b81629419b1b99ea9981a6d, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
     - target: {fileID: -2778374319544137472, guid: fb208ae619cf34a439b5ed83637439ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -217,7 +218,7 @@ PrefabInstance:
     - target: {fileID: 6316390963841895213, guid: fb208ae619cf34a439b5ed83637439ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8b3a6ec351811e441b6f43bb90f3f7e2, type: 2}
+      objectReference: {fileID: 2100000, guid: 4eb1f7568c9577549a0b73bb9885e7b3, type: 2}
     - target: {fileID: 6477694915224651174, guid: fb208ae619cf34a439b5ed83637439ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

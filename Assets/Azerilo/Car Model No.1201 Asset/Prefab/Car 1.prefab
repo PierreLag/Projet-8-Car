@@ -228,7 +228,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 707eb7b790aaa214bb421203de68536d, type: 2}
+  - {fileID: 2100000, guid: a51948d28497d19448a8eb6d1c5c131d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1283,7 +1283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a27a8be488cbb5d4bac448dda9339b95, type: 2}
+  - {fileID: 2100000, guid: a51948d28497d19448a8eb6d1c5c131d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1901,7 +1901,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 52b70203659e5654b8b1005e94b0ece3, type: 2}
+  - {fileID: 2100000, guid: adbc7bd19f1e3b14b809fd3a286fadc6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3056,7 +3056,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carData: {fileID: 11400000, guid: c67c5fdd12ca48b42ba1de7ba3dd269d, type: 2}
-  meshToColour1: {fileID: 23387216953059086}
+  meshesToColour1:
+  - {fileID: 23387216953059086}
+  - {fileID: 23483501147013674}
   meshToColour2: {fileID: 23762364541604916}
   isRotating: 0
   rotationSpeed: 0

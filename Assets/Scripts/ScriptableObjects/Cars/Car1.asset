@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Car1
   m_EditorClassIdentifier: 
   id: 0
-  model: 
-  horsepower: 0
-  gears: 0
+  model: Peugeot
+  horsepower: 90
+  gears: 5
   modelPrefab: {fileID: 1654648867817274, guid: 8258fdccd226b584b8dc1c7ac1652db0, type: 3}
   colourSchemeList:
   - {fileID: 11400000, guid: fe0bdfb93c0ecd242902ed7530cb02a6, type: 2}

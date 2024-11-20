@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e08a8018b3de994fa3e6c9f24b26746, type: 3}
+  m_Name: MetalBlackRed
+  m_EditorClassIdentifier: 
+  baseMaterial: {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  secondaryMaterial: {fileID: 2100000, guid: 4eb1f7568c9577549a0b73bb9885e7b3, type: 2}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 public class CarSelectorRenderer : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class CarSelectorRenderer : MonoBehaviour
     private ScrollRect scrollView;
     [SerializeField]
     private EmplacementController carEmplacement;
+    [SerializeField]
+    private ColourSchemeSelectorRenderer colourSchemeRenderer;
 
     [SerializeField]
     private float marginAroundButtons;
@@ -35,8 +38,10 @@ public class CarSelectorRenderer : MonoBehaviour
         }
     }
 
-    private void ChangeCar(CarSO car)
+    private async void ChangeCar(CarSO car)
     {
         carEmplacement.DisplayNewCar(car);
+        await Task.Delay(100);
+        colourSchemeRenderer.LoadCarColourSchemes(car, carEmplacement.GetCurrentCarRenderer());
     }
 }

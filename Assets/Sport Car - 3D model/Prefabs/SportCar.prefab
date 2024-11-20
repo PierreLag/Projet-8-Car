@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa36da9c6fc253a4881ea53707a543da, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
   - {fileID: 2100000, guid: c86ae241594a97e48a457e84a7179070, type: 2}
   - {fileID: 2100000, guid: 9c5d686dc1065fa4fb07bb91a28baa25, type: 2}
   m_StaticBatchInfo:
@@ -150,7 +150,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa36da9c6fc253a4881ea53707a543da, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
   - {fileID: 2100000, guid: c86ae241594a97e48a457e84a7179070, type: 2}
   - {fileID: 2100000, guid: 9c5d686dc1065fa4fb07bb91a28baa25, type: 2}
   m_StaticBatchInfo:
@@ -235,7 +235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa36da9c6fc253a4881ea53707a543da, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -328,17 +328,17 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa36da9c6fc253a4881ea53707a543da, type: 2}
-  - {fileID: 2100000, guid: 9c5d686dc1065fa4fb07bb91a28baa25, type: 2}
-  - {fileID: 2100000, guid: ad35da11fffee2344bf9ee81135ffb02, type: 2}
-  - {fileID: 2100000, guid: 47f34e06fb8c7984db37f033dcfda029, type: 2}
-  - {fileID: 2100000, guid: 0a5d78c3e1415ac40a0e25976aaae858, type: 2}
-  - {fileID: 2100000, guid: 3ff81be07d516b84498d830e113ce20d, type: 2}
-  - {fileID: 2100000, guid: ca15278988a972e498139a4b1b6b8ce9, type: 2}
-  - {fileID: 2100000, guid: e7c201546902c694084067c04832f71f, type: 2}
-  - {fileID: 2100000, guid: 8cb586d7007bbe04b9ea2a9b42a0b830, type: 2}
-  - {fileID: 2100000, guid: 9c5d686dc1065fa4fb07bb91a28baa25, type: 2}
-  - {fileID: 2100000, guid: c759fce7a5dd6dc4ea2792a428e94050, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -443,7 +443,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9c5d686dc1065fa4fb07bb91a28baa25, type: 2}
+  - {fileID: 2100000, guid: 973e946e829105248b6fa74ef944d242, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -860,8 +860,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa36da9c6fc253a4881ea53707a543da, type: 2}
-  - {fileID: 2100000, guid: 9c5d686dc1065fa4fb07bb91a28baa25, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
+  - {fileID: 2100000, guid: 3a6097910a770554dbe4329300b92ebf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536997390485366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71a2b3939a0e91f4fbe29ecd1c4af43d, type: 3}
   m_Name: 
@@ -1304,7 +1304,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carData: {fileID: 11400000, guid: 003051535dd810d49a25175d2451d500, type: 2}
-  meshToColour1: {fileID: 23350828502251332}
+  meshesToColour1:
+  - {fileID: 23350828502251332}
+  - {fileID: 23706575565414322}
+  - {fileID: 23795045499048372}
+  - {fileID: 23424649277849950}
+  - {fileID: 23745530937757740}
   meshToColour2: {fileID: 23216106595948678}
   isRotating: 0
   rotationSpeed: 0

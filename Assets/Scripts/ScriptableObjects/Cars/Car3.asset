@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f2a21d496488d3468f601e33737e224, type: 3}
   m_Name: Car3
   m_EditorClassIdentifier: 
-  id: 0
-  model: 
-  horsepower: 0
-  gears: 0
+  id: 2
+  model: Lamborghini
+  horsepower: 130
+  gears: 6
   modelPrefab: {fileID: 1536997390485366, guid: f8b49f9d229541d43b30476c740c2477, type: 3}
   colourSchemeList:
   - {fileID: 11400000, guid: fe0bdfb93c0ecd242902ed7530cb02a6, type: 2}

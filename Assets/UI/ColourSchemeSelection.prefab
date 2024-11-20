@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colourSchemeButtonTemplate: {fileID: 5137894825230338168, guid: 583a5f0a8a3ea644b99dab17e45874ba, type: 3}
   scrollView: {fileID: 5286351685292518464}
+  marginAroundButtons: 30
+  spaceBetweenButtons: 30
 --- !u!1 &1079814611072351007
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +369,7 @@ GameObject:
   - component: {fileID: 4785986272088144404}
   - component: {fileID: 4479061380853604485}
   - component: {fileID: 6875544514591564717}
+  - component: {fileID: 6273480770616368679}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -457,6 +460,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6273480770616368679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943471041390429277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &6442906058134912896
 GameObject:
   m_ObjectHideFlags: 0
