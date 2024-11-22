@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EmplacementController : MonoBehaviour
 {
     [SerializeField]
     private float carsRotationSpeed;
+
+    [SerializeField]
+    private TextMeshProUGUI modelText;
+    [SerializeField]
+    private TextMeshProUGUI horsepowerText;
+    [SerializeField]
+    private TextMeshProUGUI gearsText;
 
     private GameObject displayedCar;
 
@@ -27,6 +35,10 @@ public class EmplacementController : MonoBehaviour
         CarRenderer carRenderer = displayedCar.GetComponent<CarRenderer>();
         carRenderer.SetIsRotating(true);
         carRenderer.SetRotationSpeed(carsRotationSpeed);
+
+        modelText.text = "Modèle : " + car.model;
+        horsepowerText.text = "Chevaux : " + car.horsepower;
+        gearsText.text = "Vitesses : " + car.gears;
     }
 
     public void StopCarRotation()

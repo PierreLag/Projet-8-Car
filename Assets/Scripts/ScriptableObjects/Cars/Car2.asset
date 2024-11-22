@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f2a21d496488d3468f601e33737e224, type: 3}
   m_Name: Car2
   m_EditorClassIdentifier: 
-  id: 1
+  id: 2
   model: Chevrollet
   horsepower: 120
   gears: 6

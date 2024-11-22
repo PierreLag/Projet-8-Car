@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using TMPro;
 
 public class CarSelectorRenderer : MonoBehaviour
 {
     [SerializeField]
     private Button carButtonTemplate;
+    [SerializeField]
+    private TextMeshProUGUI noInternetTMP;
     [SerializeField]
     private CatalogueSO listCars;
     [SerializeField]

@@ -28,9 +28,12 @@ public class ColourSchemeSelectorRenderer : MonoBehaviour
     {
         foreach(Button button in displayedButtons)
         {
-            displayedButtons.Remove(button);
-            GameObject.Destroy(button);
+            GameObject.Destroy(button.gameObject);
         }
+        displayedButtons.Clear();
+
+        scrollView.content.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal,
+            2 * marginAroundButtons + car.colourSchemeList.Length * (spaceBetweenButtons + ((RectTransform)colourSchemeButtonTemplate.transform).sizeDelta.x)); // Total size that'll be alloted to the contents.
 
         currentCar = renderer;
         int currentCS = 0;
@@ -40,8 +43,8 @@ public class ColourSchemeSelectorRenderer : MonoBehaviour
             Button currentButton = Instantiate(colourSchemeButtonTemplate, scrollView.content);
 
             currentButton.onClick.AddListener(() => currentCar.ChangeColourScheme(colourScheme));
-            currentButton.GetComponent<Image>().material = colourScheme.baseMaterial;
-            ((RectTransform)currentButton.transform).localPosition = new Vector3(marginAroundButtons + currentCS * ((RectTransform)currentButton.transform).sizeDelta.x + spaceBetweenButtons * currentCS, 0, 0);
+            currentButton.GetComponent<Image>().color = colourScheme.baseMaterial.color;
+            ((RectTransform)currentButton.transform).localPosition = new Vector3(marginAroundButtons + currentCS * (((RectTransform)currentButton.transform).sizeDelta.x + spaceBetweenButtons), -(scrollView.content.sizeDelta.y /2), currentButton.transform.position.z);
 
             displayedButtons.Add(currentButton);
             currentCS++;
