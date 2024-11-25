@@ -28,16 +28,23 @@ public class CarSelectorRenderer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Button currentButton;
-        int nbCar = 0;
-
-        foreach (CarSO car in listCars.cars)
+        if (APIController.CheckInternetConnection())
         {
-            currentButton = Instantiate(carButtonTemplate, scrollView.content);
-            currentButton.onClick.AddListener( () => ChangeCar(car));
-            currentButton.GetComponent<RawImage>().texture = car.carPreviewTexture;
-            ((RectTransform)currentButton.transform).localPosition = new Vector3(marginAroundButtons + nbCar * ((RectTransform)currentButton.transform).sizeDelta.x + spaceBetweenButtons * nbCar, 0, 0);
-            nbCar++;
+            Button currentButton;
+            int nbCar = 0;
+
+            foreach (CarSO car in listCars.cars)
+            {
+                currentButton = Instantiate(carButtonTemplate, scrollView.content);
+                currentButton.onClick.AddListener(() => ChangeCar(car));
+                currentButton.GetComponent<RawImage>().texture = car.carPreviewTexture;
+                ((RectTransform)currentButton.transform).localPosition = new Vector3(marginAroundButtons + nbCar * ((RectTransform)currentButton.transform).sizeDelta.x + spaceBetweenButtons * nbCar, 0, 0);
+                nbCar++;
+            }
+        }
+        else
+        {
+            Instantiate(noInternetTMP, scrollView.transform.parent);
         }
     }
 

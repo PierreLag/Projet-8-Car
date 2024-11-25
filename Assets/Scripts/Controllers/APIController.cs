@@ -8,12 +8,22 @@ using System.Net;
 
 public class APIController : MonoBehaviour
 {
-    private static bool lastInternetCheck;
+    [SerializeField]
+    private string apiUrlBase;
 
-    // Start is called before the first frame update
-    void Start()
+    private static bool lastInternetCheck;
+    private static object latestResponse;
+    private static APIController _this;
+
+    void Awake()
     {
-        
+        if (_this != null)
+            Destroy(this.gameObject);
+        else
+        {
+            _this = this;
+            DontDestroyOnLoad(this);
+        }
     }
 
     public static bool CheckInternetConnection(int timeoutMs = 10000, string url = null)
@@ -49,5 +59,32 @@ public class APIController : MonoBehaviour
     public static bool GetLastInternetcheck()
     {
         return lastInternetCheck;
+    }
+
+    public static IEnumerator GetAllCars()
+    {
+        UnityWebRequest apiRequest = UnityWebRequest.Get(_this.apiUrlBase + "GetAllCars.php");
+        apiRequest.SendWebRequest();
+
+        while (!apiRequest.isDone)
+        {
+            yield return null;
+        }
+
+        List<Car> response = new List<Car>();
+        switch (apiRequest.result)
+        {
+            case UnityWebRequest.Result.ConnectionError:
+                break;
+            case UnityWebRequest.Result.Success:
+                string furnituresJSON = apiRequest.downloadHandler.text;
+                response = Car.ListFromJSON(furnituresJSON);
+                break;
+            default:
+                break;
+        }
+
+        Debug.Log(response);
+        latestResponse = response;
     }
 }

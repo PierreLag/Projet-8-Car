@@ -12,4 +12,17 @@ public class CarSO : ScriptableObject
     public GameObject modelPrefab;
     public ColourSchemeSO[] colourSchemeList;
     public RenderTexture carPreviewTexture;
+
+    public void UpdateFromRuntime(CarSO runtimeCar)
+    {
+        id = runtimeCar.id;
+        model = runtimeCar.model;
+        horsepower = runtimeCar.horsepower;
+        gears = runtimeCar.gears;
+    }
+
+    public override string ToString()
+    {
+        return model + ", " + horsepower + " chevaux, " + gears + "vitesses. ";
+    }
 }

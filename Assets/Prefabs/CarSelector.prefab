@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carButtonTemplate: {fileID: 5069567147892694624, guid: b26a8ed06f642f64bbe1559230b1c859, type: 3}
+  noInternetTMP: {fileID: 5826530456491783692, guid: 410e8b0017409e848977222899598abf, type: 3}
   listCars: {fileID: 11400000, guid: dd5a37730234e5c4c81f7ef5fb673a8b, type: 2}
   scrollView: {fileID: 3468608069835493389}
   carEmplacement: {fileID: 0}
@@ -1199,7 +1200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9031974261790644327, guid: 79a24fde0ffd79e4d99e45eedd18865f, type: 3}
       propertyPath: m_Size
-      value: 0.99999994
+      value: 0.6666666
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
