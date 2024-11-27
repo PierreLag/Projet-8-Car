@@ -75,6 +75,7 @@ public class APIController : MonoBehaviour
         switch (apiRequest.result)
         {
             case UnityWebRequest.Result.ConnectionError:
+                response = null;
                 break;
             case UnityWebRequest.Result.Success:
                 string furnituresJSON = apiRequest.downloadHandler.text;
@@ -86,5 +87,15 @@ public class APIController : MonoBehaviour
 
         Debug.Log(response);
         latestResponse = response;
+    }
+
+    public static object GetLatestResponse()
+    {
+        return latestResponse;
+    }
+
+    public static void ResetLatestResponse()
+    {
+        latestResponse = null;
     }
 }

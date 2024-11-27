@@ -12,6 +12,8 @@ public class CarSelectorRenderer : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI noInternetTMP;
     [SerializeField]
+    private TextMeshProUGUI serverInaccessibleTMP;
+    [SerializeField]
     private CatalogueSO listCars;
     [SerializeField]
     private ScrollRect scrollView;
@@ -26,20 +28,44 @@ public class CarSelectorRenderer : MonoBehaviour
     private float spaceBetweenButtons;
 
     // Start is called before the first frame update
-    void Start()
+    async void Start()
     {
         if (APIController.CheckInternetConnection())
         {
-            Button currentButton;
-            int nbCar = 0;
+            StartCoroutine(APIController.GetAllCars());
 
-            foreach (CarSO car in listCars.cars)
+            int numberWaiting = 0;
+            while (APIController.GetLatestResponse() == null && numberWaiting < 10)
             {
-                currentButton = Instantiate(carButtonTemplate, scrollView.content);
-                currentButton.onClick.AddListener(() => ChangeCar(car));
-                currentButton.GetComponent<RawImage>().texture = car.carPreviewTexture;
-                ((RectTransform)currentButton.transform).localPosition = new Vector3(marginAroundButtons + nbCar * ((RectTransform)currentButton.transform).sizeDelta.x + spaceBetweenButtons * nbCar, 0, 0);
-                nbCar++;
+                await Task.Delay(100);
+                numberWaiting++;
+            }
+
+            List<Car> cars = (List<Car>)APIController.GetLatestResponse();
+            if (cars == null)
+            {
+                Instantiate(serverInaccessibleTMP, scrollView.transform.parent);
+            }
+            else
+            {
+                APIController.ResetLatestResponse();
+
+                for (int i = 0; i < cars.Count; i++)
+                {
+                    listCars.cars[i].UpdateFromRuntime(Car.ToScriptableObject(cars[i]));
+                }
+
+                Button currentButton;
+                int nbCar = 0;
+
+                foreach (CarSO car in listCars.cars)
+                {
+                    currentButton = Instantiate(carButtonTemplate, scrollView.content);
+                    currentButton.onClick.AddListener(() => ChangeCar(car));
+                    currentButton.GetComponent<RawImage>().texture = car.carPreviewTexture;
+                    ((RectTransform)currentButton.transform).localPosition = new Vector3(marginAroundButtons + nbCar * ((RectTransform)currentButton.transform).sizeDelta.x + spaceBetweenButtons * nbCar, 0, 0);
+                    nbCar++;
+                }
             }
         }
         else
