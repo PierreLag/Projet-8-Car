@@ -1,0 +1,19 @@
+{
+    "name": "CarVisit",
+    "rootNamespace": "",
+    "references": [
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.TextMeshPro",
+        "Unity.Mathematics",
+        "Unity.XR.CoreUtils"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

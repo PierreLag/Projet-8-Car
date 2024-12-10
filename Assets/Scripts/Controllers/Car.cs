@@ -5,41 +5,44 @@ using System;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 
-[Serializable]
-public class Car : MonoBehaviour
+namespace CarVisit
 {
-    public int id;
-    public string model;
-    public int horsepower;
-    public int gears;
-
-    public static Car FromJSON(string json)
+    [Serializable]
+    public class Car : MonoBehaviour
     {
-        return JsonUtility.FromJson<Car>(json);
-    }
+        public int id;
+        public string model;
+        public int horsepower;
+        public int gears;
 
-    public static List<Car> ListFromJSON(string json)
-    {
-        JArray jcars = JArray.Parse(json);
-        List<Car> cars = jcars.ToObject<List<Car>>();
+        public static Car FromJSON(string json)
+        {
+            return JsonUtility.FromJson<Car>(json);
+        }
 
-        return cars;
-    }
+        public static List<Car> ListFromJSON(string json)
+        {
+            JArray jcars = JArray.Parse(json);
+            List<Car> cars = jcars.ToObject<List<Car>>();
 
-    public static CarSO ToScriptableObject(Car car)
-    {
-        CarSO carSO = new CarSO();
+            return cars;
+        }
 
-        carSO.id = car.id;
-        carSO.model = car.model;
-        carSO.horsepower = car.horsepower;
-        carSO.gears = car.gears;
+        public static CarSO ToScriptableObject(Car car)
+        {
+            CarSO carSO = new CarSO();
 
-        return carSO;
-    }
+            carSO.id = car.id;
+            carSO.model = car.model;
+            carSO.horsepower = car.horsepower;
+            carSO.gears = car.gears;
 
-    public override string ToString()
-    {
-        return model + ", " + horsepower + " chevaux, " + gears + "vitesses. ";
+            return carSO;
+        }
+
+        public override string ToString()
+        {
+            return model + ", " + horsepower + " chevaux, " + gears + "vitesses. ";
+        }
     }
 }

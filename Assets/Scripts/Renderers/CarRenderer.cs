@@ -2,50 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarRenderer : MonoBehaviour
+namespace CarVisit
 {
-    [SerializeField]
-    private CarSO carData;
-    [SerializeField]
-    private MeshRenderer[] meshesToColour1;
-    [SerializeField]
-    private MeshRenderer meshToColour2;
-
-    [SerializeField]
-    private bool isRotating;
-    [SerializeField]
-    private float rotationSpeed;
-
-    // Start is called before the first frame update
-    void Start()
+    public class CarRenderer : MonoBehaviour
     {
-        
-    }
+        [SerializeField]
+        private CarSO carData;
+        [SerializeField]
+        private MeshRenderer[] meshesToColour1;
+        [SerializeField]
+        private MeshRenderer meshToColour2;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (isRotating)
+        [SerializeField]
+        private bool isRotating;
+        [SerializeField]
+        private float rotationSpeed;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+
         }
-    }
 
-    public void ChangeColourScheme(ColourSchemeSO colourScheme)
-    {
-        foreach(MeshRenderer mesh in meshesToColour1)
-            mesh.material = colourScheme.baseMaterial;
+        // Update is called once per frame
+        void Update()
+        {
+            if (isRotating)
+            {
+                transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+            }
+        }
 
-        meshToColour2.material = colourScheme.secondaryMaterial;
-    }
+        public void ChangeColourScheme(ColourSchemeSO colourScheme)
+        {
+            foreach (MeshRenderer mesh in meshesToColour1)
+                mesh.material = colourScheme.baseMaterial;
 
-    public void SetIsRotating(bool isRotating)
-    {
-        this.isRotating = isRotating;
-    }
+            meshToColour2.material = colourScheme.secondaryMaterial;
+        }
 
-    public void SetRotationSpeed(float rotationSpeed)
-    {
-        this.rotationSpeed = rotationSpeed;
+        public void SetIsRotating(bool isRotating)
+        {
+            this.isRotating = isRotating;
+        }
+
+        public void SetRotationSpeed(float rotationSpeed)
+        {
+            this.rotationSpeed = rotationSpeed;
+        }
+
+        public Color GetMeshOneColor()
+        {
+            return meshesToColour1[0].material.color;
+        }
     }
 }

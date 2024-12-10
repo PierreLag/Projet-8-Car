@@ -2203,19 +2203,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4338618922571944514, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -2.6081435e-18
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 4338618922571944514, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 1.6039352e+10
+      value: 8.06e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4338618922571944514, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: -4.361452e-34
+      value: NaN
       objectReference: {fileID: 0}
     - target: {fileID: 4338618922571944514, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: -9.325124e-12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5565541396213352555, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_IsActive
@@ -2603,19 +2603,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6270173153164956512, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 0
+      value: 6e-44
       objectReference: {fileID: 0}
     - target: {fileID: 6270173153164956512, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0.00048828125
+      value: 8.06e-43
       objectReference: {fileID: 0}
     - target: {fileID: 6270173153164956512, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0.0009765625
+      value: 3.803589e-26
       objectReference: {fileID: 0}
     - target: {fileID: 6270173153164956512, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0.0009765625
+      value: 8.06e-43
       objectReference: {fileID: 0}
     - target: {fileID: 6586418007498927402, guid: d47be81c5f68ef049870675f093f3f89, type: 3}
       propertyPath: m_ReceiveGI
