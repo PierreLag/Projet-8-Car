@@ -28,6 +28,12 @@ namespace CarVisit
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="timeoutMs"></param>
+        /// <param name="url"></param>
+        /// <returns></returns>
         public static bool CheckInternetConnection(int timeoutMs = 10000, string url = null)
         {
             try
